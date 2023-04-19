@@ -1,8 +1,8 @@
 import requests
 
 from configurations.constants import BASE_URL, BASE_PATH_SINGLE_RESOURCE
-from src.schemas.pydantic_schemas.get_single_resource import ModelSingleResource
-from src.base_classes.single_resource_validate_response import Response
+from src.schemas.pydantic_schemas.single_resource import ModelSingleResource
+from src.base_classes.pydantic_schema_validate_response import Response
 
 
 def test_check_response_with_pydantic_schema():

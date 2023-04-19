@@ -1,6 +1,3 @@
-from configurations.error_messages import ERROR_STATUS_CODE_MESSAGE
-
-
 class Response:
 
     def __init__(self, response):
@@ -13,5 +10,10 @@ class Response:
         return self
 
     def assert_status_code(self, status_code):
-        assert self.response_status_code == status_code, ERROR_STATUS_CODE_MESSAGE
+        assert self.response_status_code == status_code, self
         return self
+
+    def __str__(self):
+        return f"\nRequest URL: {self.response.url} \n"\
+               f"Response status code: {self.response.status_code} \n"\
+               f"Response body: {self.response_json}"
