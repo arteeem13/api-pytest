@@ -1,3 +1,2 @@
-pytest -s -v --alluredir reports
-allure serve reports
+pytest -s -v --alluredir allure-report & allure serve allure-report
 rmdir /s reports
