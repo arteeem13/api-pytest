@@ -1,7 +1,7 @@
 import pytest
 import requests
 
-from configurations.constants import BASE_URL, BASE_PATH_DELAYED_RESPONSE
+from src.configurations.constants import BASE_URL, BASE_PATH_DELAYED_RESPONSE
 from src.base_classes.pydantic_schema_validate_response import Response
 from src.schemas.pydantic_schemas.delayed_response import ModelDelayedResponse
 

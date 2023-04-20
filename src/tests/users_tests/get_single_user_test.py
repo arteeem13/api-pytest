@@ -1,9 +1,7 @@
-import string
-
 import pytest
 import requests
 
-from configurations.constants import BASE_URL, BASE_PATH_SINGLE_USER
+from src.configurations.constants import BASE_URL, BASE_PATH_SINGLE_USER
 from src.base_classes.jsonschema_validate_response import Response
 from src.schemas.json_schemas.get_single_user import SINGLE_USER_SCHEMA
 

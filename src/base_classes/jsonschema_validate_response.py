@@ -1,6 +1,6 @@
 from jsonschema import validate
 
-from configurations.error_messages import ERROR_STATUS_CODE_MESSAGE
+from src.configurations.error_messages import ERROR_STATUS_CODE_MESSAGE
 
 
 class Response:

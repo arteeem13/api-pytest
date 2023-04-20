@@ -1,7 +1,7 @@
 import pytest
 import requests
 
-from configurations.constants import BASE_URL, BASE_PATH_SINGLE_RESOURCE
+from src.configurations.constants import BASE_URL, BASE_PATH_SINGLE_RESOURCE
 from src.schemas.pydantic_schemas.single_resource import ModelSingleResource
 from src.base_classes.pydantic_schema_validate_response import Response
 
