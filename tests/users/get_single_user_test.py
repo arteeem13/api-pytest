@@ -8,6 +8,7 @@ from src.base_classes.jsonschema_validate_response import Response
 from src.schemas.json_schemas.get_single_user import SINGLE_USER_SCHEMA
 
 
+@pytest.mark.users_test
 @pytest.mark.parametrize('user_id, first_name, last_name', [
     (1, 'George', 'Bluth'),
     (2, 'Janet', 'Weaver'),
@@ -17,6 +18,7 @@ from src.schemas.json_schemas.get_single_user import SINGLE_USER_SCHEMA
     (6, 'Tracey', 'Ramos')
 ])
 def test_check_response_with_jsonschema(user_id, first_name, last_name):
+    """Получение пользователя с id = user_id"""
     response = requests.get(url=BASE_URL + BASE_PATH_SINGLE_USER + str(user_id))
     response_data = Response(response)
     response_data.assert_status_code(200).validate_json_schema(SINGLE_USER_SCHEMA)
