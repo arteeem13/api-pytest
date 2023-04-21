@@ -35,7 +35,8 @@ jobs:
         run: pytest -s -v --alluredir=allure-results
         
       - name: Install allure
-        run: sudo apt-add-repository ppa:qameta/allure && sudo apt-get update && sudo apt-get install allure
+      # run: sudo apt-add-repository ppa:qameta/allure && sudo apt-get update && sudo apt-get install allure
+        run: brew install allure
         
       - name: Install allure-pytest
         run: pip3 install allure-pytest && pip3 install allure-python-commons
