@@ -15,4 +15,6 @@ jobs:
       run: echo "Произведен PUSH в MASTER"
     - name: Print all files
       run: ls -la
+    - name: Sending PUSH in Telegram
+      run: java -DconfigFile=telegram_config.json -jar allure-notifications-4.2.1.jar
       
