@@ -33,7 +33,7 @@ jobs:
       - name: Generate allure reports
         run : allure generate --clean allure-results -o allure-report
         
-      - name: Generate telegram configuration file
+      - name: Create telegram configuration file
         id  : create-json 
         uses: jsdaniell/create-json@1.1.2 
         with: 
