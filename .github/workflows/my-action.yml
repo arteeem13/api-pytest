@@ -16,16 +16,14 @@ jobs:
   sending-notification-job:
 
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.11"]
-
+    
     steps:
       - uses: actions/checkout@v3
+      
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: "3.11"
           
       - name: Install dependencies
         run: |
@@ -37,7 +35,7 @@ jobs:
         run: pytest -s -v --alluredir=allure-results
         
       - name: Install allure-pytest
-        run: pip3 install allure-pytest
+        run: pip3 install allure-pytest && pip3 install allure-python-commons
         
       - name: Generate allure reports
         run: allure generate --clean allure-results -o allure-report
