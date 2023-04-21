@@ -1,27 +1,14 @@
-name: Run tests on any Push event
+name: My-Github-Action-telegram-notification
 # Запуск при любом push евенте в любой ветке, за исключением релизных тэгов.
 # Они будт тестироваться перед сборкой
 on:
   push:
-    tags:
-      - '!refs/tags/*'
-    branches:
-      - '*'
+    branches: 
+      - master
 jobs:
-  run_tests:
-    runs-on: [ubuntu-latest]
+  starting-job:
+    runs-on: ubuntu-latest
     steps:
-      # Чекаутим код
-      - uses: actions/checkout@master
-      # Устанавливаем python нужной версии
-      - uses: actions/setup-python@v1
-        with:
-          python-version: '3.10'
-          architecture: 'x64'
-      - name: Install requirements
-        # Устанавливаем зависимости
-        run: pip install -r requirements.txt
-      - name: Run tests
-        run: coverage run tests/users_tests/get_single_user_test.py
-      - name: Tests report
-        run: coverage report
+      - name: Print MESSAGE STARTING JOB
+      - run: echo "Произведен PUSH в MASTER"
+      
