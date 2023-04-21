@@ -37,7 +37,8 @@ jobs:
         id  : create-json 
         uses: jsdaniell/create-json@1.1.2 
         with: 
-          name: "telegram_config.json" json: ${{ secrets.TELEGRAM_CONFIG_JSON }}
+          name: "telegram_config.json" 
+          json: ${{ secrets.TELEGRAM_CONFIG_JSON }}
         
       - name: Send push-notification in Telegram
         run : java -DconfigFile=telegram_config.json -jar allure-notifications-4.2.1.jar
