@@ -1,12 +1,12 @@
 {
   "base": {
-    "project": "some project",
-    "environment": "some env",
-    "comment": "some comment",
+    "project": "api_pytest_reqres.in",
+    "environment": "production",
+    "comment": "тестовый прогон",
     "reportLink": "",
     "language": "en",
     "messenger": "telegram",
-    "allureFolder": "/Users/User/Desktop/Projects/api-pytest/allure-report/",
+    "allureFolder": "allure-report/",
     "enableChart": true
   },
   "telegram": {
