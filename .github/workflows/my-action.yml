@@ -34,8 +34,8 @@ jobs:
         run : allure generate --clean allure-results -o allure-report
         
       - name: Create telegram configuration file
-        id  : create-json 
-        uses: jsdaniell/create-json@1.2.2 
+        id  : create-json
+        uses: jsdaniell/create-json@v1.2.2
         with: 
           name: "telegram_config.json" 
           json: ${{ secrets.TELEGRAM_CONFIG_JSON }}
