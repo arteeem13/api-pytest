@@ -5,14 +5,7 @@ on:
     branches: 
       - master
 jobs:
-  starting-job:
-  
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: Print MESSAGE STARTING JOB
-      run: echo "Произведен PUSH в MASTER"
-      
+
   sending-notification-job:
 
     runs-on: ubuntu-latest
@@ -35,11 +28,10 @@ jobs:
         run: pytest -s -v --alluredir=allure-results
         
       - name: Install allure
-      # run: sudo apt-add-repository ppa:qameta/allure && sudo apt-get update && sudo apt-get install allure
         run: npm install -g allure-commandline --save-dev
         
-      - name: Install allure-pytest
-        run: pip3 install allure-pytest && pip3 install allure-python-commons
+      # - name: Install allure-pytest
+      # run: pip3 install allure-pytest && pip3 install allure-python-commons
         
       - name: Generate allure reports
         run: allure generate --clean allure-results -o allure-report
