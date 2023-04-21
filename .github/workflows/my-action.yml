@@ -13,4 +13,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Print MESSAGE STARTING JOB
       run: echo "Произведен PUSH в MASTER"
+    - name: Print all files
+      run: ls -la
       
