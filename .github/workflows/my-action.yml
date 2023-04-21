@@ -36,6 +36,9 @@ jobs:
       - name: Test with pytest and generate results
         run: pytest -s -v --alluredir=allure-results
         
+      - name: Install allure-pytest
+        run: pip3 install allure-pytest
+        
       - name: Generate allure reports
         run: allure generate --clean allure-results -o allure-report
         
