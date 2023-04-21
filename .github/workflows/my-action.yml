@@ -24,17 +24,14 @@ jobs:
           pip install ruff pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           
-      - name: Test with pytest and generate results
-        run: pytest -s -v --alluredir=allure-results
-        
       - name: Install allure
         run: npm install -g allure-commandline --save-dev
-        
-      # - name: Install allure-pytest
-      # run: pip3 install allure-pytest && pip3 install allure-python-commons
+          
+      - name: Run tests and generate results
+        run: pytest -s -v --alluredir=allure-results
         
       - name: Generate allure reports
         run: allure generate --clean allure-results -o allure-report
         
-      - name: Sending PUSH in Telegram
+      - name: Send push-notification in Telegram
         run: java -DconfigFile=telegram_config.json -jar allure-notifications-4.2.1.jar
