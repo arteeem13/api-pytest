@@ -1,6 +1,5 @@
 name: My-Github-Action-telegram-notification
-# Запуск при любом push евенте в любой ветке, за исключением релизных тэгов.
-# Они будт тестироваться перед сборкой
+
 on:
   push:
     branches: 
@@ -8,7 +7,8 @@ on:
 jobs:
   starting-job:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Print MESSAGE STARTING JOB
-      - run: echo "Произведен PUSH в MASTER"
+    - name: Print MESSAGE STARTING JOB
+    - run: echo "Произведен PUSH в MASTER"
       
