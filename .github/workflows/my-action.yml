@@ -1,4 +1,4 @@
-name: My-Github-Action-telegram-notification
+name: My-Github-Action-Telegram-Notification
 
 on:
   push:
@@ -6,9 +6,11 @@ on:
       - master
 jobs:
   starting-job:
+  
     runs-on: ubuntu-latest
     
     steps:
+    - uses: actions/checkout@v1
     - name: Print MESSAGE STARTING JOB
-    - run: echo "Произведен PUSH в MASTER"
+      run: echo "Произведен PUSH в MASTER"
       
