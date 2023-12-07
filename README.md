@@ -1,4 +1,4 @@
-## **Api-tests for reqres.in!**
+## **Api-tests for reqres.in**
 ### In this project:
 #### - api autotests on python,
 #### - integration with ci githab action,
